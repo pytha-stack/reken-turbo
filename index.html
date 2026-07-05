@@ -1,25 +1,229 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Unicorn Turbo"><meta name="theme-color" content="#ffe6f7">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Reken Turbo">
+<meta name="theme-color" content="#ffe6f7">
 <title>Unicorn Reken Turbo</title>
 <style>
-:root{--pink:#ff7ac8;--purple:#9b7cff;--mint:#70e1c8;--yellow:#ffe36e;--blue:#7fd7ff;--ink:#35294c;--muted:#7c6f91;--card:rgba(255,255,255,.94);--shadow:0 18px 45px rgba(112,60,148,.18)}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;color:var(--ink)}body{min-height:100vh;min-height:100dvh;overflow-x:hidden;background:radial-gradient(circle at 12% 12%,rgba(255,227,110,.9) 0 7%,transparent 8%),radial-gradient(circle at 88% 14%,rgba(127,215,255,.65) 0 9%,transparent 10%),radial-gradient(circle at 12% 84%,rgba(112,225,200,.55) 0 9%,transparent 10%),linear-gradient(135deg,#ffe6f7 0%,#f0e9ff 46%,#e8fbff 100%)}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;background-image:radial-gradient(circle,#fff 0 2px,transparent 3px),radial-gradient(circle,#fff 0 1.5px,transparent 2.5px);background-size:38px 38px,64px 64px;background-position:0 0,17px 20px}button,input,select{font:inherit}button{border:0;cursor:pointer;color:inherit}.app{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding:max(16px,env(safe-area-inset-top)) 18px max(20px,env(safe-area-inset-bottom))}header{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1080px;width:100%;margin:0 auto 10px}.brand{display:flex;align-items:center;gap:12px;font-weight:1000;font-size:clamp(23px,4vw,36px);letter-spacing:-.5px}.logo{width:54px;height:54px;border-radius:18px;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;font-size:34px}.header-actions{display:flex;gap:10px}.iconbtn,.pill{min-height:48px;border-radius:18px;background:#fff;box-shadow:var(--shadow);font-weight:950;padding:0 14px;display:flex;align-items:center;justify-content:center;gap:7px}.iconbtn{width:52px;font-size:24px}.pill{font-size:17px}.screen{display:none;flex:1;width:100%}.screen.active{display:flex}.center{width:100%;max-width:980px;margin:auto;text-align:center}.hero-card,.game-card,.finish-card,.settings-card{background:var(--card);border-radius:34px;box-shadow:var(--shadow);padding:clamp(22px,5vw,46px);position:relative;overflow:hidden;border:2px solid rgba(255,255,255,.7)}.hero-card:before,.finish-card:before,.settings-card:before{content:"🌈";position:absolute;right:22px;top:14px;font-size:64px;opacity:.22;transform:rotate(8deg)}.unicorn{font-size:clamp(86px,15vw,148px);filter:drop-shadow(0 12px 12px rgba(124,80,160,.16));line-height:1}h1{font-size:clamp(42px,8vw,80px);line-height:.95;margin:8px 0 14px;letter-spacing:-2px}.subtitle{font-size:clamp(18px,3vw,24px);color:var(--muted);max-width:720px;margin:0 auto 24px}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px auto;max-width:780px}.rule{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:17px;box-shadow:inset 0 -4px 0 rgba(155,124,255,.08)}.rule b{display:block;font-size:24px}.rule span{color:var(--muted)}.primarybtn,.secondarybtn{padding:17px 26px;border-radius:22px;font-weight:1000;font-size:clamp(18px,3vw,24px)}.primarybtn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 0 rgba(127,72,174,.28)}.secondarybtn{background:#fff;color:var(--ink);box-shadow:var(--shadow)}.primarybtn:active,.secondarybtn:active,.answerkey:active,.iconbtn:active{transform:translateY(3px)}.note{color:var(--muted);font-size:15px;margin-top:16px}.settings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left;margin:22px 0}.setting{background:linear-gradient(180deg,#fff,#fff8fc);border-radius:24px;padding:18px;border:2px solid rgba(255,122,200,.16)}.setting label{font-size:19px;font-weight:950;display:block;margin-bottom:8px}.setting small{display:block;color:var(--muted);line-height:1.35;margin-bottom:10px}.segment{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#f4edff;border-radius:18px;padding:6px}.segbtn{border-radius:14px;padding:12px;font-weight:950;background:transparent;color:var(--muted)}.segbtn.active{background:#fff;color:var(--purple);box-shadow:0 5px 14px rgba(115,75,160,.12)}select{width:100%;padding:14px;border:2px solid #ecdff7;border-radius:18px;background:#fff;color:var(--ink);font-weight:900}.toprow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-bottom:14px}.timer{font-size:clamp(30px,5vw,46px);font-weight:1000;background:#fff;border-radius:22px;padding:10px 20px;box-shadow:var(--shadow);min-width:126px}.timer.warning{color:#db3f74;animation:pulse .7s infinite alternate}@keyframes pulse{to{transform:scale(1.045)}}.progress-info,.score-info{font-weight:1000;font-size:20px}.progress-info{text-align:left}.score-info{text-align:right}.progressbar{height:17px;background:rgba(255,255,255,.68);border-radius:999px;overflow:hidden;margin:0 0 18px;box-shadow:inset 0 2px 5px rgba(74,45,95,.08)}.progressbar>div{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--yellow),var(--mint));transition:width .25s}.game-card{padding-top:38px}.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.72}.cloud.c1{width:95px;height:30px;left:20px;top:22px}.cloud.c2{width:75px;height:24px;right:120px;top:28px}.streak{position:absolute;top:18px;right:20px;background:#fff4cf;padding:9px 13px;border-radius:999px;font-weight:1000;box-shadow:0 5px 14px rgba(127,72,174,.12)}.sum{font-size:clamp(66px,13vw,124px);font-weight:1000;line-height:1;margin:18px 0 22px;letter-spacing:-3px}.answer-preview{display:inline-flex;min-width:110px;justify-content:center;border-bottom:9px solid var(--pink);color:var(--pink)}.feedback{min-height:46px;font-size:clamp(23px,4vw,32px);font-weight:1000;margin:4px 0 15px}.feedback.good{color:#159b6e}.feedback.try{color:#d05a8f}.keypad{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;max-width:880px;margin:auto}.answerkey{min-height:68px;border-radius:21px;background:linear-gradient(180deg,#fff,#f7f1ff);font-size:clamp(24px,4vw,32px);font-weight:1000;color:var(--ink);box-shadow:inset 0 -5px 0 rgba(155,124,255,.10),0 5px 12px rgba(100,70,140,.08)}.answerkey:nth-child(3n){background:linear-gradient(180deg,#fff,#fff1fa)}.answerkey:nth-child(4n){background:linear-gradient(180deg,#fff,#eefcff)}.success-burst{position:absolute;inset:0;pointer-events:none;display:none;align-items:center;justify-content:center;font-size:clamp(96px,18vw,170px);background:rgba(255,255,255,.72);z-index:3}.success-burst.show{display:flex;animation:burst .48s ease forwards}@keyframes burst{0%{opacity:0;transform:scale(.4) rotate(-10deg)}45%{opacity:1;transform:scale(1.12)}100%{opacity:0;transform:scale(1) rotate(5deg)}}.finish-card .badge{font-size:clamp(95px,16vw,155px)}.finish-card h2{font-size:clamp(40px,7vw,72px);margin:4px 0 10px}.big-result{font-size:clamp(24px,4.5vw,38px);font-weight:1000;margin:16px 0;color:var(--purple)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin:20px auto}.stat{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:18px}.stat b{display:block;font-size:34px}.stat span{color:var(--muted)}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.floater{position:absolute;font-size:34px;opacity:.42;animation:drift 12s linear infinite}.floater:nth-child(1){left:8%;top:20%;animation-delay:0s}.floater:nth-child(2){left:85%;top:30%;animation-delay:2s}.floater:nth-child(3){left:14%;top:78%;animation-delay:4s}.floater:nth-child(4){left:78%;top:78%;animation-delay:6s}@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}@media(max-width:760px){.rules,.settings-grid{grid-template-columns:1fr}.toprow{grid-template-columns:1fr auto 1fr}.progress-info,.score-info{font-size:15px}.keypad{grid-template-columns:repeat(5,1fr)}.sum{letter-spacing:-1px}.stats{grid-template-columns:1fr}header{align-items:flex-start}.pill{display:none}}
+:root{
+  --pink:#ff73c7; --pink-soft:#ffe6f7; --purple:#9b7cff; --purple-soft:#efe8ff;
+  --mint:#72e1c8; --yellow:#ffe36e; --sky:#7fd7ff; --ink:#35294c; --muted:#7a6b8c;
+  --card:rgba(255,255,255,.94); --shadow:0 18px 45px rgba(112,60,148,.18);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink)}
+body{min-height:100vh;min-height:100dvh;overflow-x:hidden;background:radial-gradient(circle at 12% 12%,rgba(255,227,110,.9) 0 7%,transparent 8%),radial-gradient(circle at 88% 14%,rgba(127,215,255,.65) 0 9%,transparent 10%),radial-gradient(circle at 12% 84%,rgba(112,225,200,.55) 0 9%,transparent 10%),linear-gradient(135deg,#ffe6f7 0%,#f0e9ff 46%,#e8fbff 100%)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.45;background-image:radial-gradient(circle,#fff 0 2px,transparent 3px),radial-gradient(circle,#fff 0 1.5px,transparent 2.5px);background-size:38px 38px,64px 64px;background-position:0 0,17px 20px}
+button,select{font:inherit}button{border:0;cursor:pointer;color:inherit}.app{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding:max(16px,env(safe-area-inset-top)) 18px max(20px,env(safe-area-inset-bottom))}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1080px;width:100%;margin:0 auto 10px}.brand{display:flex;align-items:center;gap:12px;font-weight:1000;font-size:clamp(23px,4vw,36px);letter-spacing:-.5px}.logo{width:54px;height:54px;border-radius:18px;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;font-size:34px}.header-actions{display:flex;gap:10px}.iconbtn,.pill{min-height:48px;border-radius:18px;background:#fff;box-shadow:var(--shadow);font-weight:950;padding:0 14px;display:flex;align-items:center;justify-content:center;gap:7px}.iconbtn{width:52px;font-size:24px}.pill{font-size:17px}
+.screen{display:none;flex:1;width:100%}.screen.active{display:flex}.center{width:100%;max-width:980px;margin:auto;text-align:center}.card{background:var(--card);border-radius:34px;box-shadow:var(--shadow);padding:clamp(22px,5vw,46px);position:relative;overflow:hidden;border:2px solid rgba(255,255,255,.7)}.card:before{content:"🌈";position:absolute;right:22px;top:14px;font-size:64px;opacity:.22;transform:rotate(8deg)}.unicorn{font-size:clamp(86px,15vw,148px);filter:drop-shadow(0 12px 12px rgba(124,80,160,.16));line-height:1}h1{font-size:clamp(42px,8vw,80px);line-height:.95;margin:8px 0 14px;letter-spacing:-2px}.subtitle{font-size:clamp(18px,3vw,24px);color:var(--muted);max-width:720px;margin:0 auto 24px}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px auto;max-width:780px}.rule{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:17px;box-shadow:inset 0 -4px 0 rgba(155,124,255,.08)}.rule b{display:block;font-size:24px}.rule span{color:var(--muted)}.primarybtn,.secondarybtn{padding:17px 26px;border-radius:22px;font-weight:1000;font-size:clamp(18px,3vw,24px)}.primarybtn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 0 rgba(127,72,174,.28)}.secondarybtn{background:#fff;color:var(--ink);box-shadow:var(--shadow)}.primarybtn:active,.secondarybtn:active,.answerkey:active,.iconbtn:active{transform:translateY(3px)}.note{color:var(--muted);font-size:15px;margin-top:16px}
+.settings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left;margin:22px 0}.setting{background:linear-gradient(180deg,#fff,#fff8fc);border-radius:24px;padding:18px;border:2px solid rgba(255,122,200,.16)}.setting label{font-size:19px;font-weight:950;display:block;margin-bottom:8px}.setting small{display:block;color:var(--muted);line-height:1.35;margin-bottom:10px}.segment{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#f4edff;border-radius:18px;padding:6px}.segbtn{border-radius:14px;padding:12px;font-weight:950;background:transparent;color:var(--muted)}.segbtn.active{background:#fff;color:var(--purple);box-shadow:0 5px 14px rgba(115,75,160,.12)}select{width:100%;padding:14px;border:2px solid #ecdff7;border-radius:18px;background:#fff;color:var(--ink);font-weight:900}
+.toprow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-bottom:14px}.timer{font-size:clamp(30px,5vw,46px);font-weight:1000;background:#fff;border-radius:22px;padding:10px 20px;box-shadow:var(--shadow);min-width:126px}.timer.warning{color:#db3f74;animation:pulse .7s infinite alternate}@keyframes pulse{to{transform:scale(1.045)}}.progress-info,.score-info{font-weight:1000;font-size:20px}.progress-info{text-align:left}.score-info{text-align:right}.progressbar{height:17px;background:rgba(255,255,255,.68);border-radius:999px;overflow:hidden;margin:0 0 18px;box-shadow:inset 0 2px 5px rgba(74,45,95,.08)}.progressbar>div{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--yellow),var(--mint));transition:width .25s}.game-card{padding-top:38px}.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.72}.cloud.c1{width:95px;height:30px;left:20px;top:22px}.cloud.c2{width:75px;height:24px;right:120px;top:28px}.streak{position:absolute;top:18px;right:20px;background:#fff4cf;padding:9px 13px;border-radius:999px;font-weight:1000;box-shadow:0 5px 14px rgba(127,72,174,.12)}.sum{font-size:clamp(62px,12vw,118px);font-weight:1000;line-height:1;margin:18px 0 22px;letter-spacing:-3px}.answer-preview{display:inline-flex;min-width:110px;justify-content:center;border-bottom:9px solid var(--pink);color:var(--pink)}.feedback{min-height:46px;font-size:clamp(23px,4vw,32px);font-weight:1000;margin:4px 0 15px}.feedback.good{color:#159b6e}.feedback.try{color:#d05a8f}.keypad{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;max-width:880px;margin:auto}.answerkey{min-height:68px;border-radius:21px;background:linear-gradient(180deg,#fff,#f7f1ff);font-size:clamp(24px,4vw,32px);font-weight:1000;color:var(--ink);box-shadow:inset 0 -5px 0 rgba(155,124,255,.10),0 5px 12px rgba(100,70,140,.08)}.answerkey:nth-child(3n){background:linear-gradient(180deg,#fff,#fff1fa)}.answerkey:nth-child(4n){background:linear-gradient(180deg,#fff,#eefcff)}.success-burst{position:absolute;inset:0;pointer-events:none;display:none;align-items:center;justify-content:center;font-size:clamp(96px,18vw,170px);background:rgba(255,255,255,.72);z-index:3}.success-burst.show{display:flex;animation:burst .48s ease forwards}@keyframes burst{0%{opacity:0;transform:scale(.4) rotate(-10deg)}45%{opacity:1;transform:scale(1.12)}100%{opacity:0;transform:scale(1) rotate(5deg)}}.badge{font-size:clamp(95px,16vw,155px)}.finish-card h2{font-size:clamp(40px,7vw,72px);margin:4px 0 10px}.big-result{font-size:clamp(24px,4.5vw,38px);font-weight:1000;margin:16px 0;color:var(--purple)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin:20px auto}.stat{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:18px}.stat b{display:block;font-size:34px}.stat span{color:var(--muted)}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.floater{position:absolute;font-size:34px;opacity:.42;animation:drift 12s linear infinite}.floater:nth-child(1){left:8%;top:20%;animation-delay:0s}.floater:nth-child(2){left:85%;top:30%;animation-delay:2s}.floater:nth-child(3){left:14%;top:78%;animation-delay:4s}.floater:nth-child(4){left:78%;top:78%;animation-delay:6s}@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}
+@media(max-width:760px){.rules,.settings-grid{grid-template-columns:1fr}.toprow{grid-template-columns:1fr auto 1fr}.progress-info,.score-info{font-size:15px}.keypad{grid-template-columns:repeat(5,1fr)}.sum{letter-spacing:-1px}.stats{grid-template-columns:1fr}header{align-items:flex-start}.pill{display:none}}
 </style>
 </head>
 <body>
 <div class="floaters" aria-hidden="true"><span class="floater">⭐</span><span class="floater">💖</span><span class="floater">🌸</span><span class="floater">✨</span></div>
 <div class="app">
-<header><div class="brand"><span class="logo">🦄</span><span>Unicorn Reken Turbo</span></div><div class="header-actions"><button class="pill" id="summaryPill">10 sommen · 1 minuut · tot 10</button><button class="iconbtn" id="settingsBtn" aria-label="Instellingen">⚙️</button></div></header>
-<section id="start" class="screen active"><div class="center"><div class="hero-card"><div class="unicorn">🦄</div><h1>Klaar voor turbo-magie?</h1><p class="subtitle">Los de sommen op, verzamel sterren en laat de unicorn over de regenboog vliegen.</p><div class="rules"><div class="rule"><b id="ruleTime">⏱️ 1 minuut</b><span>Vlot, maar zonder stress</span></div><div class="rule"><b id="ruleTotal">🔢 10 sommen</b><span>Jij stelt het aantal in</span></div><div class="rule"><b id="ruleRange">🌈 tot 10</b><span>Of oefenen tot 20</span></div></div><button class="primarybtn" id="startBtn">Start de turbo!</button><button class="secondarybtn" id="startSettingsBtn" style="margin-left:8px">Instellingen</button><div class="note">Moeilijkere sommen komen wat vaker terug, maar alle passende sommen kunnen verschijnen.</div></div></div></section>
-<section id="settings" class="screen"><div class="center"><div class="settings-card"><h1 style="font-size:clamp(36px,6vw,62px)">Instellingen</h1><p class="subtitle">Kies hoe lang de turbo duurt en hoe moeilijk de sommen mogen zijn.</p><div class="settings-grid"><div class="setting"><label for="totalSelect">Aantal sommen</label><small>Een korte reeks geeft sneller succes. Meer sommen is goed voor automatiseren.</small><select id="totalSelect"><option value="5">5 sommen</option><option value="10">10 sommen</option><option value="15">15 sommen</option><option value="20">20 sommen</option><option value="25">25 sommen</option></select></div><div class="setting"><label for="timeSelect">Tijd</label><small>Start rustig. Korter maken kan later nog.</small><select id="timeSelect"><option value="30">30 seconden</option><option value="45">45 seconden</option><option value="60">1 minuut</option><option value="90">1 minuut 30</option><option value="120">2 minuten</option></select></div><div class="setting"><label>Soort sommen</label><small>Tot 10 blijft bij antwoorden 0 tot 10. Tot 20 toont knoppen 0 tot 20.</small><div class="segment"><button class="segbtn active" data-range="10">Tot 10</button><button class="segbtn" data-range="20">Tot 20</button></div></div><div class="setting"><label>Turbo-stijl</label><small>De reeks blijft positief: juist is feest, fout is kort leren en meteen verder.</small><div style="font-size:54px;text-align:center">🦄 🌈 ⭐ 💖</div></div></div><div class="actions"><button class="primarybtn" id="saveSettingsBtn">Bewaren</button><button class="secondarybtn" id="cancelSettingsBtn">Terug</button></div></div></div></section>
-<section id="game" class="screen"><div class="center"><div class="toprow"><div class="progress-info">som <span id="currentNo">1</span></div><div class="timer" id="timer">1:00</div><div class="score-info">⭐ <span id="score">0</span></div></div><div class="progressbar"><div id="bar"></div></div><div class="game-card"><div class="cloud c1"></div><div class="cloud c2"></div><div class="streak">🔥 <span id="streak">0</span></div><div class="sum"><span id="a">7</span> <span id="op">+</span> <span id="b">2</span> = <span class="answer-preview" id="preview">?</span></div><div class="feedback" id="feedback">Tik het juiste antwoord aan</div><div class="keypad" id="keypad"></div><div class="success-burst" id="burst">🌟</div></div></div></section>
-<section id="finish" class="screen"><div class="center"><div class="finish-card"><div class="badge" id="badge">🏆</div><h2 id="finishTitle">Turbo voltooid!</h2><div class="big-result" id="finishText"></div><div class="stats"><div class="stat"><b id="statCorrect">0/10</b><span>juist</span></div><div class="stat"><b id="statTime">0s</b><span>tijd gebruikt</span></div><div class="stat"><b id="statBest">0</b><span>beste reeks</span></div></div><div class="actions"><button class="primarybtn" id="againBtn">Nog een turbo!</button><button class="secondarybtn" id="finishSettingsBtn">Instellingen</button><button class="secondarybtn" id="homeBtn">Naar start</button></div></div></div></section>
+<header>
+  <div class="brand"><span class="logo">🦄</span><span>Unicorn Reken Turbo</span></div>
+  <div class="header-actions"><button class="pill" id="summaryPill" type="button">10 sommen · 1 minuut · tot 10</button><button class="iconbtn" id="settingsBtn" type="button" aria-label="Instellingen">⚙️</button></div>
+</header>
+<section id="start" class="screen active"><div class="center"><div class="card">
+  <div class="unicorn">🦄</div><h1>Klaar voor turbo-magie?</h1><p class="subtitle">Los de sommen op, verzamel sterren en laat de unicorn over de regenboog vliegen.</p>
+  <div class="rules"><div class="rule"><b id="ruleTime">⏱️ 1 minuut</b><span>Vlot, maar zonder stress</span></div><div class="rule"><b id="ruleTotal">🔢 10 sommen</b><span>Jij stelt het aantal in</span></div><div class="rule"><b id="ruleRange">🌈 tot 10</b><span>Of oefenen tot 20</span></div></div>
+  <button class="primarybtn" id="startBtn" type="button">Start de turbo!</button><button class="secondarybtn" id="startSettingsBtn" type="button" style="margin-left:8px">Instellingen</button><div class="note">Moeilijkere sommen komen wat vaker terug, maar alle passende sommen kunnen verschijnen.</div>
+</div></div></section>
+<section id="settings" class="screen"><div class="center"><div class="card">
+  <h1 style="font-size:clamp(36px,6vw,62px)">Instellingen</h1><p class="subtitle">Kies hoe lang de turbo duurt en hoe moeilijk de sommen mogen zijn.</p>
+  <div class="settings-grid">
+    <div class="setting"><label for="totalSelect">Aantal sommen</label><small>Een korte reeks geeft sneller succes. Meer sommen is goed voor automatiseren.</small><select id="totalSelect"><option value="5">5 sommen</option><option value="10">10 sommen</option><option value="15">15 sommen</option><option value="20">20 sommen</option><option value="25">25 sommen</option></select></div>
+    <div class="setting"><label for="timeSelect">Tijd</label><small>Start rustig. Korter maken kan later nog.</small><select id="timeSelect"><option value="30">30 seconden</option><option value="45">45 seconden</option><option value="60">1 minuut</option><option value="90">1 minuut 30</option><option value="120">2 minuten</option></select></div>
+    <div class="setting"><label>Soort sommen</label><small>Tot 10 gebruikt antwoorden 0 tot 10. Tot 20 gebruikt antwoorden 0 tot 20.</small><div class="segment"><button class="segbtn active" type="button" data-range="10">Tot 10</button><button class="segbtn" type="button" data-range="20">Tot 20</button></div></div>
+    <div class="setting"><label>Turbo-stijl</label><small>Juist is feest, fout is kort leren en meteen verder.</small><div style="font-size:54px;text-align:center">🦄 🌈 ⭐ 💖</div></div>
+  </div><div class="actions"><button class="primarybtn" id="saveSettingsBtn" type="button">Bewaren</button><button class="secondarybtn" id="cancelSettingsBtn" type="button">Terug</button></div>
+</div></div></section>
+<section id="game" class="screen"><div class="center">
+  <div class="toprow"><div class="progress-info">som <span id="currentNo">1</span></div><div class="timer" id="timer">1:00</div><div class="score-info">⭐ <span id="score">0</span></div></div>
+  <div class="progressbar"><div id="bar"></div></div><div class="card game-card"><div class="cloud c1"></div><div class="cloud c2"></div><div class="streak">🔥 <span id="streak">0</span></div><div class="sum"><span id="a">7</span> <span id="op">+</span> <span id="b">2</span> = <span class="answer-preview" id="preview">?</span></div><div class="feedback" id="feedback">Tik het juiste antwoord aan</div><div class="keypad" id="keypad"></div><div class="success-burst" id="burst">🌟</div></div>
+</div></section>
+<section id="finish" class="screen"><div class="center"><div class="card finish-card"><div class="badge" id="badge">🏆</div><h2 id="finishTitle">Turbo voltooid!</h2><div class="big-result" id="finishText"></div><div class="stats"><div class="stat"><b id="statCorrect">0/10</b><span>juist</span></div><div class="stat"><b id="statTime">0s</b><span>tijd gebruikt</span></div><div class="stat"><b id="statBest">0</b><span>beste reeks</span></div></div><div class="actions"><button class="primarybtn" id="againBtn" type="button">Nog een turbo!</button><button class="secondarybtn" id="finishSettingsBtn" type="button">Instellingen</button><button class="secondarybtn" id="homeBtn" type="button">Naar start</button></div></div></div></section>
 </div>
 <script>
-const defaults={total:10,limit:60,range:10};let config=Object.assign({},defaults,JSON.parse(localStorage.getItem('unicornTurboSettings')||'{}'));let state={};const $=id=>document.getElementById(id);function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));$(id).classList.add('active')}function timeLabel(s){if(s<60)return s+' seconden';if(s===60)return'1 minuut';if(s===90)return'1 minuut 30';if(s===120)return'2 minuten';return s+' seconden'}function timerText(seconds){const s=Math.max(0,Math.ceil(seconds));return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}function result(x){return x.op==='+'?x.a+x.b:x.a-x.b}function updateSummary(){$('summaryPill').textContent=`${config.total} sommen · ${timeLabel(config.limit)} · tot ${config.range}`;$('ruleTime').textContent=`⏱️ ${timeLabel(config.limit)}`;$('ruleTotal').textContent=`🔢 ${config.total} sommen`;$('ruleRange').textContent=`🌈 tot ${config.range}`}function loadSettingsUI(){$('totalSelect').value=String(config.total);$('timeSelect').value=String(config.limit);document.querySelectorAll('.segbtn').forEach(b=>b.classList.toggle('active',Number(b.dataset.range)===Number(config.range)))}function saveSettings(){config.total=Number($('totalSelect').value);config.limit=Number($('timeSelect').value);const active=document.querySelector('.segbtn.active');config.range=Number(active?active.dataset.range:10);localStorage.setItem('unicornTurboSettings',JSON.stringify(config));updateSummary()}function focusList(max){const base10=[{a:7,b:2,op:'+'},{a:7,b:2,op:'-'},{a:8,b:3,op:'-'},{a:1,b:8,op:'+'},{a:8,b:1,op:'+'},{a:3,b:7,op:'+'},{a:7,b:3,op:'+'},{a:2,b:8,op:'+'},{a:8,b:2,op:'+'},{a:9,b:2,op:'-'},{a:10,b:3,op:'-'},{a:6,b:3,op:'+'},{a:6,b:2,op:'-'},{a:4,b:5,op:'+'},{a:9,b:4,op:'-'}];const base20=[...base10,{a:8,b:7,op:'+'},{a:7,b:8,op:'+'},{a:9,b:6,op:'+'},{a:6,b:9,op:'+'},{a:13,b:5,op:'-'},{a:14,b:6,op:'-'},{a:15,b:7,op:'-'},{a:16,b:8,op:'-'},{a:9,b:9,op:'+'},{a:8,b:8,op:'+'},{a:11,b:4,op:'+'},{a:12,b:5,op:'+'},{a:18,b:9,op:'-'},{a:17,b:8,op:'-'}];return(max===20?base20:base10).filter(x=>result(x)>=0&&result(x)<=max)}function allExercises(max){const arr=[];for(let a=0;a<=max;a++){for(let b=0;b<=max;b++){if(a+b<=max&&!(a===0&&b===0))arr.push({a,b,op:'+'});if(a>=b&&!(a===0&&b===0))arr.push({a,b,op:'-'})}}return arr}function pickExercise(pool,focus){let ex;do{ex=Math.random()<.62?{...focus[Math.floor(Math.random()*focus.length)]}:{...pool[Math.floor(Math.random()*pool.length)]}}while(result(ex)<0||result(ex)>config.range);return ex}function buildRound(){const pool=allExercises(config.range),focus=focusList(config.range),items=[];while(items.length<config.total){const ex=pickExercise(pool,focus),prev=items[items.length-1];if(prev&&prev.a===ex.a&&prev.b===ex.b&&prev.op===ex.op)continue;items.push(ex)}return items}function buildKeys(){const k=$('keypad');k.innerHTML='';for(let i=0;i<=config.range;i++){const b=document.createElement('button');b.className='answerkey';b.textContent=i;b.dataset.value=i;k.appendChild(b)}}function render(){const ex=state.items[state.index];$('a').textContent=ex.a;$('b').textContent=ex.b;$('op').textContent=ex.op;$('currentNo').textContent=state.index+1;$('score').textContent=state.correct;$('streak').textContent=state.streak;$('bar').style.width=(state.index/config.total*100)+'%';$('preview').textContent='?';$('feedback').textContent='Tik het juiste antwoord aan';$('feedback').className='feedback';$('burst').classList.remove('show');state.locked=false}function start(){clearInterval(state.timerId);state={items:buildRound(),index:0,correct:0,streak:0,best:0,timeLeft:config.limit,startTime:Date.now(),timerId:null,locked:false,finished:false};buildKeys();$('timer').textContent=timerText(config.limit);$('timer').classList.remove('warning');show('game');render();state.timerId=setInterval(tick,250)}function tick(){if(state.finished)return;const elapsed=(Date.now()-state.startTime)/1000;state.timeLeft=Math.max(0,config.limit-elapsed);const ceil=Math.ceil(state.timeLeft);$('timer').textContent=timerText(ceil);$('timer').classList.toggle('warning',ceil<=10);if(state.timeLeft<=0)finish(false)}function celebrate(){const x=$('burst');x.classList.remove('show');void x.offsetWidth;x.classList.add('show');clearTimeout(x._hideTimer);x._hideTimer=setTimeout(()=>x.classList.remove('show'),500)}function answer(value){if(state.locked||state.finished)return;state.locked=true;const ex=state.items[state.index],right=result(ex),good=Number(value)===right;$('preview').textContent=value;if(good){state.correct++;state.streak++;state.best=Math.max(state.best,state.streak);$('feedback').textContent=['Magisch!','Knap!','Superster!','Juist!','Unicorn power!','Wauw!'][Math.floor(Math.random()*6)];$('feedback').className='feedback good';celebrate()}else{state.streak=0;$('feedback').textContent=`Bijna! Het was ${right}. Volgende lukt!`;$('feedback').className='feedback try'}$('score').textContent=state.correct;$('streak').textContent=state.streak;setTimeout(()=>{state.index++;if(state.index>=config.total)finish(true);else render()},good?520:900)}function finish(completed){if(state.finished)return;state.finished=true;clearInterval(state.timerId);$('burst').classList.remove('show');const used=Math.min(config.limit,Math.max(1,Math.round((Date.now()-state.startTime)/1000)));$('bar').style.width=(state.index/config.total*100)+'%';$('statCorrect').textContent=`${state.correct}/${config.total}`;$('statTime').textContent=`${used}s`;$('statBest').textContent=state.best;if(completed){$('badge').textContent=state.correct===config.total?'🏆':'🦄';$('finishTitle').textContent='Turbo voltooid!';$('finishText').textContent=state.correct===config.total?`Fantastisch! Alle ${config.total} sommen juist binnen ${timeLabel(config.limit)}.`:`Je voltooide ${config.total} sommen binnen ${timeLabel(config.limit)}. Sterk gedaan!`}else{$('badge').textContent='🌟';$('finishTitle').textContent='Goed geoefend!';$('finishText').textContent=`De tijd is voorbij. Je loste ${state.index} sommen op. Elke poging maakt je sneller.`}show('finish')}
-$('startBtn').onclick=start;$('againBtn').onclick=start;$('homeBtn').onclick=()=>show('start');$('settingsBtn').onclick=()=>{loadSettingsUI();show('settings')};$('startSettingsBtn').onclick=()=>{loadSettingsUI();show('settings')};$('finishSettingsBtn').onclick=()=>{loadSettingsUI();show('settings')};$('cancelSettingsBtn').onclick=()=>show('start');$('saveSettingsBtn').onclick=()=>{saveSettings();show('start')};document.querySelectorAll('.segbtn').forEach(b=>b.onclick=()=>document.querySelectorAll('.segbtn').forEach(x=>x.classList.toggle('active',x===b)));$('keypad').addEventListener('click',e=>{const b=e.target.closest('[data-value]');if(b)answer(b.dataset.value)});updateSummary();
+(function(){
+  'use strict';
+  const DEFAULTS = { total: 10, limit: 60, range: 10 };
+  let config = loadConfig();
+  let state = resetState();
+
+  function el(id){ return document.getElementById(id); }
+  function all(selector){ return Array.from(document.querySelectorAll(selector)); }
+  function safeParse(value, fallback){ try { return JSON.parse(value) || fallback; } catch(e){ return fallback; } }
+  function loadConfig(){
+    const stored = safeParse(localStorage.getItem('unicornTurboSettings'), {});
+    const merged = Object.assign({}, DEFAULTS, stored);
+    merged.total = [5,10,15,20,25].includes(Number(merged.total)) ? Number(merged.total) : DEFAULTS.total;
+    merged.limit = [30,45,60,90,120].includes(Number(merged.limit)) ? Number(merged.limit) : DEFAULTS.limit;
+    merged.range = Number(merged.range) === 20 ? 20 : 10;
+    return merged;
+  }
+  function storeConfig(){ localStorage.setItem('unicornTurboSettings', JSON.stringify(config)); }
+  function resetState(){ return { items: [], index: 0, correct: 0, streak: 0, best: 0, startTime: 0, timerId: null, locked: false, finished: false }; }
+  function show(screenId){ all('.screen').forEach(s => s.classList.remove('active')); el(screenId).classList.add('active'); }
+  function timeLabel(seconds){ if(seconds === 30) return '30 seconden'; if(seconds === 45) return '45 seconden'; if(seconds === 60) return '1 minuut'; if(seconds === 90) return '1 minuut 30'; if(seconds === 120) return '2 minuten'; return seconds + ' seconden'; }
+  function timerText(seconds){ const s = Math.max(0, Math.ceil(seconds)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
+  function result(ex){ return ex.op === '+' ? ex.a + ex.b : ex.a - ex.b; }
+  function valid(ex, max){ const r = result(ex); return r >= 0 && r <= max; }
+  function updateSummary(){
+    el('summaryPill').textContent = config.total + ' sommen · ' + timeLabel(config.limit) + ' · tot ' + config.range;
+    el('ruleTime').textContent = '⏱️ ' + timeLabel(config.limit);
+    el('ruleTotal').textContent = '🔢 ' + config.total + ' sommen';
+    el('ruleRange').textContent = '🌈 tot ' + config.range;
+  }
+  function loadSettingsUI(){
+    el('totalSelect').value = String(config.total);
+    el('timeSelect').value = String(config.limit);
+    all('.segbtn').forEach(btn => btn.classList.toggle('active', Number(btn.dataset.range) === config.range));
+  }
+  function saveSettings(){
+    config.total = Number(el('totalSelect').value);
+    config.limit = Number(el('timeSelect').value);
+    const active = document.querySelector('.segbtn.active');
+    config.range = active && Number(active.dataset.range) === 20 ? 20 : 10;
+    storeConfig(); updateSummary();
+  }
+  function focusList(max){
+    const base10 = [
+      {a:7,b:2,op:'+'},{a:7,b:2,op:'-'},{a:8,b:3,op:'-'},{a:1,b:8,op:'+'},{a:8,b:1,op:'+'},
+      {a:3,b:7,op:'+'},{a:7,b:3,op:'+'},{a:2,b:8,op:'+'},{a:8,b:2,op:'+'},{a:9,b:2,op:'-'},
+      {a:10,b:3,op:'-'},{a:6,b:3,op:'+'},{a:6,b:2,op:'-'},{a:4,b:5,op:'+'},{a:9,b:4,op:'-'}
+    ];
+    const extra20 = [
+      {a:8,b:7,op:'+'},{a:7,b:8,op:'+'},{a:9,b:6,op:'+'},{a:6,b:9,op:'+'},{a:13,b:5,op:'-'},
+      {a:14,b:6,op:'-'},{a:15,b:7,op:'-'},{a:16,b:8,op:'-'},{a:9,b:9,op:'+'},{a:8,b:8,op:'+'},
+      {a:11,b:4,op:'+'},{a:12,b:5,op:'+'},{a:18,b:9,op:'-'},{a:17,b:8,op:'-'}
+    ];
+    return (max === 20 ? base10.concat(extra20) : base10).filter(ex => valid(ex, max));
+  }
+  function allExercises(max){
+    const pool = [];
+    for(let a=0; a<=max; a++){
+      for(let b=0; b<=max; b++){
+        if(a + b <= max && !(a === 0 && b === 0)) pool.push({a,b,op:'+'});
+        if(a >= b && !(a === 0 && b === 0)) pool.push({a,b,op:'-'});
+      }
+    }
+    return pool;
+  }
+  function randomItem(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
+  function pickExercise(pool, focus){
+    for(let i=0; i<100; i++){
+      const source = Math.random() < 0.62 ? focus : pool;
+      const ex = Object.assign({}, randomItem(source));
+      if(valid(ex, config.range)) return ex;
+    }
+    return {a:1,b:1,op:'+'};
+  }
+  function buildRound(){
+    const pool = allExercises(config.range);
+    const focus = focusList(config.range);
+    const items = [];
+    while(items.length < config.total){
+      const ex = pickExercise(pool, focus);
+      const prev = items[items.length - 1];
+      if(prev && prev.a === ex.a && prev.b === ex.b && prev.op === ex.op) continue;
+      items.push(ex);
+    }
+    return items;
+  }
+  function buildKeys(){
+    const keypad = el('keypad');
+    keypad.innerHTML = '';
+    for(let i=0; i<=config.range; i++){
+      const btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'answerkey'; btn.textContent = String(i); btn.dataset.value = String(i);
+      keypad.appendChild(btn);
+    }
+  }
+  function renderQuestion(){
+    if(state.finished) return;
+    const ex = state.items[state.index];
+    if(!ex){ finish(true); return; }
+    el('a').textContent = ex.a; el('b').textContent = ex.b; el('op').textContent = ex.op;
+    el('currentNo').textContent = String(state.index + 1);
+    el('score').textContent = String(state.correct); el('streak').textContent = String(state.streak);
+    el('bar').style.width = (state.index / config.total * 100) + '%';
+    el('preview').textContent = '?'; el('feedback').textContent = 'Tik het juiste antwoord aan'; el('feedback').className = 'feedback';
+    el('burst').classList.remove('show');
+    state.locked = false;
+  }
+  function startGame(){
+    if(state.timerId) clearInterval(state.timerId);
+    state = resetState(); state.items = buildRound(); state.startTime = Date.now();
+    buildKeys(); el('timer').textContent = timerText(config.limit); el('timer').classList.remove('warning');
+    show('game'); renderQuestion();
+    state.timerId = setInterval(tick, 250);
+  }
+  function tick(){
+    if(state.finished) return;
+    const elapsed = (Date.now() - state.startTime) / 1000;
+    const remaining = Math.max(0, config.limit - elapsed);
+    el('timer').textContent = timerText(remaining);
+    el('timer').classList.toggle('warning', remaining <= 10);
+    if(remaining <= 0) finish(false);
+  }
+  function celebrate(){
+    const burst = el('burst');
+    burst.classList.remove('show'); void burst.offsetWidth; burst.classList.add('show');
+    clearTimeout(burst._hideTimer); burst._hideTimer = setTimeout(() => burst.classList.remove('show'), 500);
+  }
+  function answer(value){
+    if(state.locked || state.finished) return;
+    state.locked = true;
+    const ex = state.items[state.index];
+    const right = result(ex); const good = Number(value) === right;
+    el('preview').textContent = String(value);
+    if(good){
+      state.correct += 1; state.streak += 1; state.best = Math.max(state.best, state.streak);
+      const messages = ['Magisch!','Knap!','Superster!','Juist!','Unicorn power!','Wauw!'];
+      el('feedback').textContent = messages[Math.floor(Math.random() * messages.length)]; el('feedback').className = 'feedback good'; celebrate();
+    } else {
+      state.streak = 0; el('feedback').textContent = 'Bijna! Het was ' + right + '. Volgende lukt!'; el('feedback').className = 'feedback try';
+    }
+    el('score').textContent = String(state.correct); el('streak').textContent = String(state.streak);
+    setTimeout(() => { if(state.finished) return; state.index += 1; if(state.index >= config.total) finish(true); else renderQuestion(); }, good ? 520 : 900);
+  }
+  function finish(completed){
+    if(state.finished) return;
+    state.finished = true;
+    if(state.timerId) clearInterval(state.timerId);
+    el('burst').classList.remove('show');
+    const used = Math.min(config.limit, Math.max(0, Math.round((Date.now() - state.startTime) / 1000)));
+    el('bar').style.width = (Math.min(state.index, config.total) / config.total * 100) + '%';
+    el('statCorrect').textContent = state.correct + '/' + config.total; el('statTime').textContent = used + 's'; el('statBest').textContent = String(state.best);
+    if(completed){
+      el('badge').textContent = state.correct === config.total ? '🏆' : '🦄'; el('finishTitle').textContent = 'Turbo voltooid!';
+      el('finishText').textContent = state.correct === config.total ? 'Fantastisch! Alle ' + config.total + ' sommen juist binnen ' + timeLabel(config.limit) + '.' : 'Je voltooide ' + config.total + ' sommen binnen ' + timeLabel(config.limit) + '. Sterk gedaan!';
+    } else {
+      el('badge').textContent = '🌟'; el('finishTitle').textContent = 'Goed geoefend!';
+      el('finishText').textContent = 'De tijd is voorbij. Je loste ' + state.index + ' sommen op. Elke poging maakt je sneller.';
+    }
+    show('finish');
+  }
+  function openSettings(){ loadSettingsUI(); show('settings'); }
+  function bindEvents(){
+    el('startBtn').addEventListener('click', startGame); el('againBtn').addEventListener('click', startGame); el('homeBtn').addEventListener('click', () => show('start'));
+    el('settingsBtn').addEventListener('click', openSettings); el('startSettingsBtn').addEventListener('click', openSettings); el('finishSettingsBtn').addEventListener('click', openSettings);
+    el('cancelSettingsBtn').addEventListener('click', () => show('start'));
+    el('saveSettingsBtn').addEventListener('click', () => { saveSettings(); show('start'); });
+    all('.segbtn').forEach(btn => btn.addEventListener('click', () => { all('.segbtn').forEach(x => x.classList.toggle('active', x === btn)); }));
+    el('keypad').addEventListener('click', evt => { const btn = evt.target.closest('[data-value]'); if(btn) answer(btn.dataset.value); });
+  }
+  bindEvents(); updateSummary(); loadSettingsUI();
+})();
 </script>
-</body></html>
+</body>
+</html>
