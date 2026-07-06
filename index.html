@@ -22,6 +22,9 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
 .screen{display:none;flex:1;width:100%}.screen.active{display:flex}.center{width:100%;max-width:980px;margin:auto;text-align:center}.card{background:var(--card);border-radius:34px;box-shadow:var(--shadow);padding:clamp(22px,5vw,46px);position:relative;overflow:hidden;border:2px solid rgba(255,255,255,.7)}.card:before{content:"🌈";position:absolute;right:22px;top:14px;font-size:64px;opacity:.22;transform:rotate(8deg)}.unicorn{font-size:clamp(86px,15vw,148px);filter:drop-shadow(0 12px 12px rgba(124,80,160,.16));line-height:1}h1{font-size:clamp(42px,8vw,80px);line-height:.95;margin:8px 0 14px;letter-spacing:-2px}.subtitle{font-size:clamp(18px,3vw,24px);color:var(--muted);max-width:720px;margin:0 auto 24px}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px auto;max-width:780px}.rule{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:17px;box-shadow:inset 0 -4px 0 rgba(155,124,255,.08)}.rule b{display:block;font-size:24px}.rule span{color:var(--muted)}.primarybtn,.secondarybtn{padding:17px 26px;border-radius:22px;font-weight:1000;font-size:clamp(18px,3vw,24px)}.primarybtn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 0 rgba(127,72,174,.28)}.secondarybtn{background:#fff;color:var(--ink);box-shadow:var(--shadow)}.primarybtn:active,.secondarybtn:active,.answerkey:active,.iconbtn:active{transform:translateY(3px)}.note{color:var(--muted);font-size:15px;margin-top:16px}
 .settings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left;margin:22px 0}.setting{background:linear-gradient(180deg,#fff,#fff8fc);border-radius:24px;padding:18px;border:2px solid rgba(255,122,200,.16)}.setting label{font-size:19px;font-weight:950;display:block;margin-bottom:8px}.setting small{display:block;color:var(--muted);line-height:1.35;margin-bottom:10px}.segment{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#f4edff;border-radius:18px;padding:6px}.segbtn{border-radius:14px;padding:12px;font-weight:950;background:transparent;color:var(--muted)}.segbtn.active{background:#fff;color:var(--purple);box-shadow:0 5px 14px rgba(115,75,160,.12)}select{width:100%;padding:14px;border:2px solid #ecdff7;border-radius:18px;background:#fff;color:var(--ink);font-weight:900}
 .toprow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-bottom:14px}.timer{font-size:clamp(30px,5vw,46px);font-weight:1000;background:#fff;border-radius:22px;padding:10px 20px;box-shadow:var(--shadow);min-width:126px}.timer.warning{color:#db3f74;animation:pulse .7s infinite alternate}@keyframes pulse{to{transform:scale(1.045)}}.progress-info,.score-info{font-weight:1000;font-size:20px}.progress-info{text-align:left}.score-info{text-align:right}.progressbar{height:17px;background:rgba(255,255,255,.68);border-radius:999px;overflow:hidden;margin:0 0 18px;box-shadow:inset 0 2px 5px rgba(74,45,95,.08)}.progressbar>div{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--yellow),var(--mint));transition:width .25s}.game-card{padding-top:38px}.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.72}.cloud.c1{width:95px;height:30px;left:20px;top:22px}.cloud.c2{width:75px;height:24px;right:120px;top:28px}.streak{position:absolute;top:18px;right:20px;background:#fff4cf;padding:9px 13px;border-radius:999px;font-weight:1000;box-shadow:0 5px 14px rgba(127,72,174,.12)}.sum{font-size:clamp(62px,12vw,118px);font-weight:1000;line-height:1;margin:18px 0 22px;letter-spacing:-3px}.answer-preview{display:inline-flex;min-width:110px;justify-content:center;border-bottom:9px solid var(--pink);color:var(--pink)}.feedback{min-height:46px;font-size:clamp(23px,4vw,32px);font-weight:1000;margin:4px 0 15px}.feedback.good{color:#159b6e}.feedback.try{color:#d05a8f}.keypad{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;max-width:880px;margin:auto}.answerkey{min-height:68px;border-radius:21px;background:linear-gradient(180deg,#fff,#f7f1ff);font-size:clamp(24px,4vw,32px);font-weight:1000;color:var(--ink);box-shadow:inset 0 -5px 0 rgba(155,124,255,.10),0 5px 12px rgba(100,70,140,.08)}.answerkey:nth-child(3n){background:linear-gradient(180deg,#fff,#fff1fa)}.answerkey:nth-child(4n){background:linear-gradient(180deg,#fff,#eefcff)}.success-burst{position:absolute;inset:0;pointer-events:none;display:none;align-items:center;justify-content:center;font-size:clamp(96px,18vw,170px);background:rgba(255,255,255,.72);z-index:3}.success-burst.show{display:flex;animation:burst .48s ease forwards}@keyframes burst{0%{opacity:0;transform:scale(.4) rotate(-10deg)}45%{opacity:1;transform:scale(1.12)}100%{opacity:0;transform:scale(1) rotate(5deg)}}.badge{font-size:clamp(95px,16vw,155px)}.finish-card h2{font-size:clamp(40px,7vw,72px);margin:4px 0 10px}.big-result{font-size:clamp(24px,4.5vw,38px);font-weight:1000;margin:16px 0;color:var(--purple)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin:20px auto}.stat{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:18px}.stat b{display:block;font-size:34px}.stat span{color:var(--muted)}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.floater{position:absolute;font-size:34px;opacity:.42;animation:drift 12s linear infinite}.floater:nth-child(1){left:8%;top:20%;animation-delay:0s}.floater:nth-child(2){left:85%;top:30%;animation-delay:2s}.floater:nth-child(3){left:14%;top:78%;animation-delay:4s}.floater:nth-child(4){left:78%;top:78%;animation-delay:6s}@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}
+
+.timer.paused{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;animation:none}.correction-overlay{position:fixed;inset:0;z-index:25;display:none;align-items:center;justify-content:center;padding:max(18px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));background:rgba(255,246,252,.62);backdrop-filter:blur(6px)}.correction-overlay.show{display:flex}.correction-card{width:min(720px,100%);background:rgba(255,255,255,.97);border:2px solid rgba(255,255,255,.88);border-radius:34px;box-shadow:var(--shadow);padding:clamp(22px,5vw,42px);text-align:center;position:relative;overflow:hidden}.correction-card:before{content:"🌈";position:absolute;right:22px;top:14px;font-size:56px;opacity:.18;transform:rotate(8deg)}.correction-title{font-size:clamp(38px,7vw,64px);line-height:1;margin:0 0 18px;color:var(--pink);font-weight:1000;letter-spacing:-1px}.correction-label{font-size:clamp(18px,3vw,24px);color:var(--muted);font-weight:950;margin:18px 0 6px}.correction-equation{font-size:clamp(36px,7vw,62px);line-height:1.05;font-weight:1000;color:var(--purple);letter-spacing:-1px}.correction-equation.correct{font-size:clamp(48px,10vw,86px);color:var(--pink);margin-top:4px}.correction-divider{border:0;border-top:6px dotted rgba(255,115,199,.22);margin:24px auto;max-width:520px}.correction-note{color:var(--muted);font-weight:900;font-size:clamp(17px,3vw,22px);margin:18px 0 0}.correction-card .primarybtn{margin-top:22px;min-width:min(360px,100%)}
+
 @media(max-width:760px){.rules,.settings-grid{grid-template-columns:1fr}.toprow{grid-template-columns:1fr auto 1fr}.progress-info,.score-info{font-size:15px}.keypad{grid-template-columns:repeat(5,1fr)}.sum{letter-spacing:-1px}.stats{grid-template-columns:1fr}header{align-items:flex-start}.pill{display:none}}
 </style>
 </head>
@@ -50,6 +53,18 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
   <div class="toprow"><div class="progress-info">som <span id="currentNo">1</span></div><div class="timer" id="timer">1:00</div><div class="score-info">⭐ <span id="score">0</span></div></div>
   <div class="progressbar"><div id="bar"></div></div><div class="card game-card"><div class="cloud c1"></div><div class="cloud c2"></div><div class="streak">🔥 <span id="streak">0</span></div><div class="sum"><span id="a">7</span> <span id="op">+</span> <span id="b">2</span> = <span class="answer-preview" id="preview">?</span></div><div class="feedback" id="feedback">Tik het juiste antwoord aan</div><div class="keypad" id="keypad"></div><div class="success-burst" id="burst">🌟</div></div>
 </div></section>
+<div class="correction-overlay" id="correctionOverlay" aria-hidden="true">
+  <div class="correction-card" role="dialog" aria-modal="true" aria-labelledby="correctionTitle">
+    <h2 class="correction-title" id="correctionTitle">Bijna! 🌈</h2>
+    <div class="correction-label">Je koos:</div>
+    <div class="correction-equation" id="chosenEquation">8 − 3 = 6</div>
+    <hr class="correction-divider">
+    <div class="correction-label">Het juiste antwoord is:</div>
+    <div class="correction-equation correct" id="correctEquation">8 − 3 = 5</div>
+    <p class="correction-note">Onthoud deze voor straks ⭐</p>
+    <button class="primarybtn" id="continueAfterWrongBtn" type="button">Volgende som</button>
+  </div>
+</div>
 <section id="finish" class="screen"><div class="center"><div class="card finish-card"><div class="badge" id="badge">🏆</div><h2 id="finishTitle">Turbo voltooid!</h2><div class="big-result" id="finishText"></div><div class="stats"><div class="stat"><b id="statCorrect">0/10</b><span>juist</span></div><div class="stat"><b id="statTime">0s</b><span>tijd gebruikt</span></div><div class="stat"><b id="statBest">0</b><span>beste reeks</span></div></div><div class="actions"><button class="primarybtn" id="againBtn" type="button">Nog een turbo!</button><button class="secondarybtn" id="finishSettingsBtn" type="button">Instellingen</button><button class="secondarybtn" id="homeBtn" type="button">Naar start</button></div></div></div></section>
 </div>
 <script>
@@ -71,12 +86,30 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     return merged;
   }
   function storeConfig(){ localStorage.setItem('unicornTurboSettings', JSON.stringify(config)); }
-  function resetState(){ return { items: [], index: 0, correct: 0, streak: 0, best: 0, startTime: 0, timerId: null, locked: false, finished: false }; }
+  function resetState(){
+    return {
+      items: [], index: 0, correct: 0, streak: 0, best: 0,
+      startTime: 0, totalPausedMs: 0, pausedAt: 0,
+      timerId: null, pendingTimeout: null,
+      locked: false, paused: false, finished: false
+    };
+  }
   function show(screenId){ all('.screen').forEach(s => s.classList.remove('active')); el(screenId).classList.add('active'); }
   function timeLabel(seconds){ if(seconds === 30) return '30 seconden'; if(seconds === 45) return '45 seconden'; if(seconds === 60) return '1 minuut'; if(seconds === 90) return '1 minuut 30'; if(seconds === 120) return '2 minuten'; return seconds + ' seconden'; }
   function timerText(seconds){ const s = Math.max(0, Math.ceil(seconds)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
   function result(ex){ return ex.op === '+' ? ex.a + ex.b : ex.a - ex.b; }
   function valid(ex, max){ const r = result(ex); return r >= 0 && r <= max; }
+  function equation(ex, answer){ return ex.a + ' ' + ex.op + ' ' + ex.b + ' = ' + answer; }
+  function elapsedMs(){ return state.startTime ? Math.max(0, Date.now() - state.startTime - state.totalPausedMs) : 0; }
+  function remainingSeconds(){ return Math.max(0, config.limit - elapsedMs() / 1000); }
+  function setTimerDisplay(seconds, paused){
+    const timer = el('timer');
+    timer.textContent = (paused ? '⏸ ' : '') + timerText(seconds);
+    timer.classList.toggle('paused', !!paused);
+    timer.classList.toggle('warning', !paused && seconds <= 10);
+  }
+  function clearPendingTimeout(){ if(state.pendingTimeout){ clearTimeout(state.pendingTimeout); state.pendingTimeout = null; } }
+  function hideCorrection(){ const overlay = el('correctionOverlay'); overlay.classList.remove('show'); overlay.setAttribute('aria-hidden','true'); }
   function updateSummary(){
     el('summaryPill').textContent = config.total + ' sommen · ' + timeLabel(config.limit) + ' · tot ' + config.range;
     el('ruleTime').textContent = '⏱️ ' + timeLabel(config.limit);
@@ -119,6 +152,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     return pool;
   }
   function randomItem(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
+  function sameExercise(a,b){ return !!a && !!b && a.a === b.a && a.b === b.b && a.op === b.op; }
   function pickExercise(pool, focus){
     for(let i=0; i<100; i++){
       const source = Math.random() < 0.62 ? focus : pool;
@@ -134,7 +168,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     while(items.length < config.total){
       const ex = pickExercise(pool, focus);
       const prev = items[items.length - 1];
-      if(prev && prev.a === ex.a && prev.b === ex.b && prev.op === ex.op) continue;
+      if(sameExercise(prev, ex)) continue;
       items.push(ex);
     }
     return items;
@@ -150,6 +184,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
   }
   function renderQuestion(){
     if(state.finished) return;
+    clearPendingTimeout(); hideCorrection();
     const ex = state.items[state.index];
     if(!ex){ finish(true); return; }
     el('a').textContent = ex.a; el('b').textContent = ex.b; el('op').textContent = ex.op;
@@ -162,17 +197,16 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
   }
   function startGame(){
     if(state.timerId) clearInterval(state.timerId);
+    clearPendingTimeout(); hideCorrection();
     state = resetState(); state.items = buildRound(); state.startTime = Date.now();
-    buildKeys(); el('timer').textContent = timerText(config.limit); el('timer').classList.remove('warning');
+    buildKeys(); setTimerDisplay(config.limit, false);
     show('game'); renderQuestion();
     state.timerId = setInterval(tick, 250);
   }
   function tick(){
-    if(state.finished) return;
-    const elapsed = (Date.now() - state.startTime) / 1000;
-    const remaining = Math.max(0, config.limit - elapsed);
-    el('timer').textContent = timerText(remaining);
-    el('timer').classList.toggle('warning', remaining <= 10);
+    if(state.finished || state.paused) return;
+    const remaining = remainingSeconds();
+    setTimerDisplay(remaining, false);
     if(remaining <= 0) finish(false);
   }
   function celebrate(){
@@ -180,28 +214,65 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     burst.classList.remove('show'); void burst.offsetWidth; burst.classList.add('show');
     clearTimeout(burst._hideTimer); burst._hideTimer = setTimeout(() => burst.classList.remove('show'), 500);
   }
+  function scheduleRetry(ex){
+    if(state.index >= config.total - 2) return;
+    const minTarget = state.index + 2;
+    const maxTarget = Math.min(config.total - 1, state.index + 4);
+    const target = minTarget + Math.floor(Math.random() * (maxTarget - minTarget + 1));
+    if(target > state.index && target < state.items.length){
+      const retry = Object.assign({}, ex);
+      const before = state.items[target - 1];
+      const after = state.items[target + 1];
+      if(!sameExercise(before, retry) && !sameExercise(after, retry)) state.items[target] = retry;
+    }
+  }
+  function advanceAfterAnswer(){
+    if(state.finished) return;
+    state.index += 1;
+    if(state.index >= config.total) finish(true); else renderQuestion();
+  }
+  function showCorrection(ex, chosen, right){
+    state.paused = true;
+    state.pausedAt = Date.now();
+    setTimerDisplay(remainingSeconds(), true);
+    el('chosenEquation').textContent = equation(ex, chosen);
+    el('correctEquation').textContent = equation(ex, right);
+    const overlay = el('correctionOverlay');
+    overlay.classList.add('show'); overlay.setAttribute('aria-hidden','false');
+    el('continueAfterWrongBtn').focus({preventScroll:true});
+  }
+  function continueAfterWrong(){
+    if(state.finished || !state.paused) return;
+    state.totalPausedMs += Date.now() - state.pausedAt;
+    state.pausedAt = 0; state.paused = false;
+    hideCorrection(); setTimerDisplay(remainingSeconds(), false);
+    advanceAfterAnswer();
+  }
   function answer(value){
-    if(state.locked || state.finished) return;
+    if(state.locked || state.finished || state.paused) return;
     state.locked = true;
     const ex = state.items[state.index];
-    const right = result(ex); const good = Number(value) === right;
-    el('preview').textContent = String(value);
+    const right = result(ex); const chosen = Number(value); const good = chosen === right;
+    el('preview').textContent = String(chosen);
     if(good){
       state.correct += 1; state.streak += 1; state.best = Math.max(state.best, state.streak);
       const messages = ['Magisch!','Knap!','Superster!','Juist!','Unicorn power!','Wauw!'];
       el('feedback').textContent = messages[Math.floor(Math.random() * messages.length)]; el('feedback').className = 'feedback good'; celebrate();
+      state.pendingTimeout = setTimeout(advanceAfterAnswer, 520);
     } else {
-      state.streak = 0; el('feedback').textContent = 'Bijna! Het was ' + right + '. Volgende lukt!'; el('feedback').className = 'feedback try';
+      state.streak = 0;
+      el('feedback').textContent = 'Bijna!'; el('feedback').className = 'feedback try';
+      scheduleRetry(ex);
+      showCorrection(ex, chosen, right);
     }
     el('score').textContent = String(state.correct); el('streak').textContent = String(state.streak);
-    setTimeout(() => { if(state.finished) return; state.index += 1; if(state.index >= config.total) finish(true); else renderQuestion(); }, good ? 520 : 900);
   }
   function finish(completed){
     if(state.finished) return;
     state.finished = true;
     if(state.timerId) clearInterval(state.timerId);
-    el('burst').classList.remove('show');
-    const used = Math.min(config.limit, Math.max(0, Math.round((Date.now() - state.startTime) / 1000)));
+    clearPendingTimeout(); hideCorrection(); el('timer').classList.remove('paused'); el('burst').classList.remove('show');
+    const used = Math.min(config.limit, Math.max(0, Math.round(elapsedMs() / 1000)));
     el('bar').style.width = (Math.min(state.index, config.total) / config.total * 100) + '%';
     el('statCorrect').textContent = state.correct + '/' + config.total; el('statTime').textContent = used + 's'; el('statBest').textContent = String(state.best);
     if(completed){
@@ -213,7 +284,12 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     }
     show('finish');
   }
-  function openSettings(){ loadSettingsUI(); show('settings'); }
+  function stopGameIfActive(){
+    if(state.timerId) clearInterval(state.timerId);
+    clearPendingTimeout(); hideCorrection();
+    if(!state.finished) state.finished = true;
+  }
+  function openSettings(){ stopGameIfActive(); loadSettingsUI(); show('settings'); }
   function bindEvents(){
     el('startBtn').addEventListener('click', startGame); el('againBtn').addEventListener('click', startGame); el('homeBtn').addEventListener('click', () => show('start'));
     el('settingsBtn').addEventListener('click', openSettings); el('startSettingsBtn').addEventListener('click', openSettings); el('finishSettingsBtn').addEventListener('click', openSettings);
@@ -221,6 +297,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     el('saveSettingsBtn').addEventListener('click', () => { saveSettings(); show('start'); });
     all('.segbtn').forEach(btn => btn.addEventListener('click', () => { all('.segbtn').forEach(x => x.classList.toggle('active', x === btn)); }));
     el('keypad').addEventListener('click', evt => { const btn = evt.target.closest('[data-value]'); if(btn) answer(btn.dataset.value); });
+    el('continueAfterWrongBtn').addEventListener('click', continueAfterWrong);
   }
   bindEvents(); updateSummary(); loadSettingsUI();
 })();
