@@ -21,7 +21,11 @@ button,select{font:inherit}button{border:0;cursor:pointer;color:inherit}.app{pos
 header{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1080px;width:100%;margin:0 auto 10px}.brand{display:flex;align-items:center;gap:12px;font-weight:1000;font-size:clamp(23px,4vw,36px);letter-spacing:-.5px}.logo{width:54px;height:54px;border-radius:18px;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;font-size:34px}.header-actions{display:flex;gap:10px}.iconbtn,.pill{min-height:48px;border-radius:18px;background:#fff;box-shadow:var(--shadow);font-weight:950;padding:0 14px;display:flex;align-items:center;justify-content:center;gap:7px}.iconbtn{width:52px;font-size:24px}.pill{font-size:17px}
 .screen{display:none;flex:1;width:100%}.screen.active{display:flex}.center{width:100%;max-width:980px;margin:auto;text-align:center}.card{background:var(--card);border-radius:34px;box-shadow:var(--shadow);padding:clamp(22px,5vw,46px);position:relative;overflow:hidden;border:2px solid rgba(255,255,255,.7)}.card:before{content:"🌈";position:absolute;right:22px;top:14px;font-size:64px;opacity:.22;transform:rotate(8deg)}.unicorn{font-size:clamp(86px,15vw,148px);filter:drop-shadow(0 12px 12px rgba(124,80,160,.16));line-height:1}h1{font-size:clamp(42px,8vw,80px);line-height:.95;margin:8px 0 14px;letter-spacing:-2px}.subtitle{font-size:clamp(18px,3vw,24px);color:var(--muted);max-width:720px;margin:0 auto 24px}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px auto;max-width:780px}.rule{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:17px;box-shadow:inset 0 -4px 0 rgba(155,124,255,.08)}.rule b{display:block;font-size:24px}.rule span{color:var(--muted)}.primarybtn,.secondarybtn{padding:17px 26px;border-radius:22px;font-weight:1000;font-size:clamp(18px,3vw,24px)}.primarybtn{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 0 rgba(127,72,174,.28)}.secondarybtn{background:#fff;color:var(--ink);box-shadow:var(--shadow)}.primarybtn:active,.secondarybtn:active,.answerkey:active,.iconbtn:active{transform:translateY(3px)}.note{color:var(--muted);font-size:15px;margin-top:16px}
 .settings-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;text-align:left;margin:22px 0}.setting{background:linear-gradient(180deg,#fff,#fff8fc);border-radius:24px;padding:18px;border:2px solid rgba(255,122,200,.16)}.setting label{font-size:19px;font-weight:950;display:block;margin-bottom:8px}.setting small{display:block;color:var(--muted);line-height:1.35;margin-bottom:10px}.segment{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#f4edff;border-radius:18px;padding:6px}.segbtn{border-radius:14px;padding:12px;font-weight:950;background:transparent;color:var(--muted)}.segbtn.active{background:#fff;color:var(--purple);box-shadow:0 5px 14px rgba(115,75,160,.12)}select{width:100%;padding:14px;border:2px solid #ecdff7;border-radius:18px;background:#fff;color:var(--ink);font-weight:900}
-.toprow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-bottom:14px}.timer{font-size:clamp(30px,5vw,46px);font-weight:1000;background:#fff;border-radius:22px;padding:10px 20px;box-shadow:var(--shadow);min-width:126px}.timer.warning{color:#db3f74;animation:pulse .7s infinite alternate}@keyframes pulse{to{transform:scale(1.045)}}.progress-info,.score-info{font-weight:1000;font-size:20px}.progress-info{text-align:left}.score-info{text-align:right}.progressbar{height:17px;background:rgba(255,255,255,.68);border-radius:999px;overflow:hidden;margin:0 0 18px;box-shadow:inset 0 2px 5px rgba(74,45,95,.08)}.progressbar>div{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--yellow),var(--mint));transition:width .25s}.game-card{padding-top:38px}.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.72}.cloud.c1{width:95px;height:30px;left:20px;top:22px}.cloud.c2{width:75px;height:24px;right:120px;top:28px}.streak{position:absolute;top:18px;right:20px;background:#fff4cf;padding:9px 13px;border-radius:999px;font-weight:1000;box-shadow:0 5px 14px rgba(127,72,174,.12)}.sum{font-size:clamp(62px,12vw,118px);font-weight:1000;line-height:1;margin:18px 0 22px;letter-spacing:-3px}.answer-preview{display:inline-flex;min-width:110px;justify-content:center;border-bottom:9px solid var(--pink);color:var(--pink)}.feedback{min-height:46px;font-size:clamp(23px,4vw,32px);font-weight:1000;margin:4px 0 15px}.feedback.good{color:#159b6e}.feedback.try{color:#d05a8f}.keypad{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;max-width:880px;margin:auto}.answerkey{min-height:68px;border-radius:21px;background:linear-gradient(180deg,#fff,#f7f1ff);font-size:clamp(24px,4vw,32px);font-weight:1000;color:var(--ink);box-shadow:inset 0 -5px 0 rgba(155,124,255,.10),0 5px 12px rgba(100,70,140,.08)}.answerkey:nth-child(3n){background:linear-gradient(180deg,#fff,#fff1fa)}.answerkey:nth-child(4n){background:linear-gradient(180deg,#fff,#eefcff)}.success-burst{position:absolute;inset:0;pointer-events:none;display:none;align-items:center;justify-content:center;font-size:clamp(96px,18vw,170px);background:rgba(255,255,255,.72);z-index:3}.success-burst.show{display:flex;animation:burst .48s ease forwards}@keyframes burst{0%{opacity:0;transform:scale(.4) rotate(-10deg)}45%{opacity:1;transform:scale(1.12)}100%{opacity:0;transform:scale(1) rotate(5deg)}}.badge{font-size:clamp(95px,16vw,155px)}.finish-card h2{font-size:clamp(40px,7vw,72px);margin:4px 0 10px}.big-result{font-size:clamp(24px,4.5vw,38px);font-weight:1000;margin:16px 0;color:var(--purple)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin:20px auto}.stat{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:18px}.stat b{display:block;font-size:34px}.stat span{color:var(--muted)}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.floater{position:absolute;font-size:34px;opacity:.42;animation:drift 12s linear infinite}.floater:nth-child(1){left:8%;top:20%;animation-delay:0s}.floater:nth-child(2){left:85%;top:30%;animation-delay:2s}.floater:nth-child(3){left:14%;top:78%;animation-delay:4s}.floater:nth-child(4){left:78%;top:78%;animation-delay:6s}@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}
+.toprow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;margin-bottom:14px}.timer{font-size:clamp(30px,5vw,46px);font-weight:1000;background:#fff;border-radius:22px;padding:10px 20px;box-shadow:var(--shadow);min-width:126px}.timer.warning{color:#db3f74;animation:pulse .7s infinite alternate}@keyframes pulse{to{transform:scale(1.045)}}.progress-info,.score-info{font-weight:1000;font-size:20px}.progress-info{text-align:left}.score-info{text-align:right}.progressbar{height:17px;background:rgba(255,255,255,.68);border-radius:999px;overflow:hidden;margin:0 0 18px;box-shadow:inset 0 2px 5px rgba(74,45,95,.08)}.progressbar>div{height:100%;width:0;background:linear-gradient(90deg,var(--pink),var(--yellow),var(--mint));transition:width .25s}.game-card{padding-top:38px}.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.72}.cloud.c1{width:95px;height:30px;left:20px;top:22px}.cloud.c2{width:75px;height:24px;right:120px;top:28px}.streak{position:absolute;top:18px;right:20px;background:#fff4cf;padding:9px 13px;border-radius:999px;font-weight:1000;box-shadow:0 5px 14px rgba(127,72,174,.12)}.sum{font-size:clamp(62px,12vw,118px);font-weight:1000;line-height:1;margin:18px 0 22px;letter-spacing:-3px}.answer-preview{display:inline-flex;min-width:110px;justify-content:center;border-bottom:9px solid var(--pink);color:var(--pink)}.feedback{min-height:46px;font-size:clamp(23px,4vw,32px);font-weight:1000;margin:4px 0 15px}.feedback.good{color:#159b6e}.feedback.try{color:#d05a8f}.keypad{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;max-width:880px;margin:auto}
+.keypad.four-options{grid-template-columns:repeat(4,1fr);max-width:760px;gap:14px}
+.keypad.four-options .answerkey{min-height:96px;font-size:clamp(34px,7vw,52px)}
+.setting.disabled{opacity:.48;filter:saturate(.65)}
+.setting.disabled .segbtn{pointer-events:none}.answerkey{min-height:68px;border-radius:21px;background:linear-gradient(180deg,#fff,#f7f1ff);font-size:clamp(24px,4vw,32px);font-weight:1000;color:var(--ink);box-shadow:inset 0 -5px 0 rgba(155,124,255,.10),0 5px 12px rgba(100,70,140,.08)}.answerkey:nth-child(3n){background:linear-gradient(180deg,#fff,#fff1fa)}.answerkey:nth-child(4n){background:linear-gradient(180deg,#fff,#eefcff)}.success-burst{position:absolute;inset:0;pointer-events:none;display:none;align-items:center;justify-content:center;font-size:clamp(96px,18vw,170px);background:rgba(255,255,255,.72);z-index:3}.success-burst.show{display:flex;animation:burst .48s ease forwards}@keyframes burst{0%{opacity:0;transform:scale(.4) rotate(-10deg)}45%{opacity:1;transform:scale(1.12)}100%{opacity:0;transform:scale(1) rotate(5deg)}}.badge{font-size:clamp(95px,16vw,155px)}.finish-card h2{font-size:clamp(40px,7vw,72px);margin:4px 0 10px}.big-result{font-size:clamp(24px,4.5vw,38px);font-weight:1000;margin:16px 0;color:var(--purple)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:720px;margin:20px auto}.stat{background:linear-gradient(180deg,#fff,#fff6fb);border-radius:22px;padding:18px}.stat b{display:block;font-size:34px}.stat span{color:var(--muted)}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}.floaters{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.floater{position:absolute;font-size:34px;opacity:.42;animation:drift 12s linear infinite}.floater:nth-child(1){left:8%;top:20%;animation-delay:0s}.floater:nth-child(2){left:85%;top:30%;animation-delay:2s}.floater:nth-child(3){left:14%;top:78%;animation-delay:4s}.floater:nth-child(4){left:78%;top:78%;animation-delay:6s}@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-22px) rotate(8deg)}}
 
 .timer.paused{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;animation:none}.correction-overlay{position:fixed;inset:0;z-index:25;display:none;align-items:center;justify-content:center;padding:max(18px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));background:rgba(255,246,252,.62);backdrop-filter:blur(6px)}.correction-overlay.show{display:flex}.correction-card{width:min(720px,100%);background:rgba(255,255,255,.97);border:2px solid rgba(255,255,255,.88);border-radius:34px;box-shadow:var(--shadow);padding:clamp(22px,5vw,42px);text-align:center;position:relative;overflow:hidden}.correction-card:before{content:"🌈";position:absolute;right:22px;top:14px;font-size:56px;opacity:.18;transform:rotate(8deg)}.correction-title{font-size:clamp(38px,7vw,64px);line-height:1;margin:0 0 18px;color:var(--pink);font-weight:1000;letter-spacing:-1px}.correction-label{font-size:clamp(18px,3vw,24px);color:var(--muted);font-weight:950;margin:18px 0 6px}.correction-equation{font-size:clamp(36px,7vw,62px);line-height:1.05;font-weight:1000;color:var(--purple);letter-spacing:-1px}.correction-equation.correct{font-size:clamp(48px,10vw,86px);color:var(--pink);margin-top:4px}.correction-divider{border:0;border-top:6px dotted rgba(255,115,199,.22);margin:24px auto;max-width:520px}.correction-note{color:var(--muted);font-weight:900;font-size:clamp(17px,3vw,22px);margin:18px 0 0}.correction-card .primarybtn{margin-top:22px;min-width:min(360px,100%)}
 
@@ -46,6 +50,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     <div class="setting"><label for="totalSelect">Aantal sommen</label><small>Een korte reeks geeft sneller succes. Meer sommen is goed voor automatiseren.</small><select id="totalSelect"><option value="5">5 sommen</option><option value="10">10 sommen</option><option value="15">15 sommen</option><option value="20">20 sommen</option><option value="25">25 sommen</option></select></div>
     <div class="setting"><label for="timeSelect">Tijd</label><small>Start rustig. Korter maken kan later nog.</small><select id="timeSelect"><option value="30">30 seconden</option><option value="45">45 seconden</option><option value="60">1 minuut</option><option value="90">1 minuut 30</option><option value="120">2 minuten</option></select></div>
     <div class="setting"><label>Soort sommen</label><small>Tot 10 gebruikt antwoorden 0 tot 10. Tot 20 gebruikt antwoorden 0 tot 20.</small><div class="segment"><button class="segbtn active" type="button" data-range="10">Tot 10</button><button class="segbtn" type="button" data-range="20">Tot 20</button></div></div>
+    <div class="setting" id="answerModeSetting"><label>Antwoordknoppen</label><small>Bij 4 knoppen krijgt ze 1 juist en 3 foute antwoorden. Zo kan ze minder makkelijk uit-tellen via 0 tot 10.</small><div class="segment"><button class="segbtn active" type="button" data-answer-mode="all">0 tot 10</button><button class="segbtn" type="button" data-answer-mode="four">4 knoppen</button></div></div>
     <div class="setting"><label>Turbo-stijl</label><small>Juist is feest, fout is kort leren en meteen verder.</small><div style="font-size:54px;text-align:center">🦄 🌈 ⭐ 💖</div></div>
   </div><div class="actions"><button class="primarybtn" id="saveSettingsBtn" type="button">Bewaren</button><button class="secondarybtn" id="cancelSettingsBtn" type="button">Terug</button></div>
 </div></div></section>
@@ -70,7 +75,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
 <script>
 (function(){
   'use strict';
-  const DEFAULTS = { total: 10, limit: 60, range: 10 };
+  const DEFAULTS = { total: 10, limit: 60, range: 10, answerMode: 'all' };
   let config = loadConfig();
   let state = resetState();
 
@@ -83,6 +88,8 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     merged.total = [5,10,15,20,25].includes(Number(merged.total)) ? Number(merged.total) : DEFAULTS.total;
     merged.limit = [30,45,60,90,120].includes(Number(merged.limit)) ? Number(merged.limit) : DEFAULTS.limit;
     merged.range = Number(merged.range) === 20 ? 20 : 10;
+    merged.answerMode = merged.answerMode === 'four' ? 'four' : 'all';
+    if(merged.range !== 10) merged.answerMode = 'all';
     return merged;
   }
   function storeConfig(){ localStorage.setItem('unicornTurboSettings', JSON.stringify(config)); }
@@ -110,22 +117,39 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
   }
   function clearPendingTimeout(){ if(state.pendingTimeout){ clearTimeout(state.pendingTimeout); state.pendingTimeout = null; } }
   function hideCorrection(){ const overlay = el('correctionOverlay'); overlay.classList.remove('show'); overlay.setAttribute('aria-hidden','true'); }
+  function answerModeLabel(){
+    return config.range === 10 && config.answerMode === 'four' ? '4 knoppen' : '0 tot ' + config.range;
+  }
   function updateSummary(){
-    el('summaryPill').textContent = config.total + ' sommen · ' + timeLabel(config.limit) + ' · tot ' + config.range;
+    el('summaryPill').textContent = config.total + ' sommen · ' + timeLabel(config.limit) + ' · tot ' + config.range + ' · ' + answerModeLabel();
     el('ruleTime').textContent = '⏱️ ' + timeLabel(config.limit);
     el('ruleTotal').textContent = '🔢 ' + config.total + ' sommen';
-    el('ruleRange').textContent = '🌈 tot ' + config.range;
+    el('ruleRange').textContent = '🌈 ' + answerModeLabel();
+  }
+  function updateAnswerModeAvailability(){
+    const activeRange = document.querySelector('[data-range].active');
+    const selectedRange = activeRange && Number(activeRange.dataset.range) === 20 ? 20 : 10;
+    const box = el('answerModeSetting');
+    box.classList.toggle('disabled', selectedRange !== 10);
+    if(selectedRange !== 10){
+      all('[data-answer-mode]').forEach(btn => btn.classList.toggle('active', btn.dataset.answerMode === 'all'));
+    }
   }
   function loadSettingsUI(){
     el('totalSelect').value = String(config.total);
     el('timeSelect').value = String(config.limit);
-    all('.segbtn').forEach(btn => btn.classList.toggle('active', Number(btn.dataset.range) === config.range));
+    all('[data-range]').forEach(btn => btn.classList.toggle('active', Number(btn.dataset.range) === config.range));
+    all('[data-answer-mode]').forEach(btn => btn.classList.toggle('active', btn.dataset.answerMode === (config.answerMode || 'all')));
+    updateAnswerModeAvailability();
   }
   function saveSettings(){
     config.total = Number(el('totalSelect').value);
     config.limit = Number(el('timeSelect').value);
-    const active = document.querySelector('.segbtn.active');
-    config.range = active && Number(active.dataset.range) === 20 ? 20 : 10;
+    const activeRange = document.querySelector('[data-range].active');
+    config.range = activeRange && Number(activeRange.dataset.range) === 20 ? 20 : 10;
+    const activeMode = document.querySelector('[data-answer-mode].active');
+    config.answerMode = activeMode ? activeMode.dataset.answerMode : 'all';
+    if(config.range !== 10) config.answerMode = 'all';
     storeConfig(); updateSummary();
   }
   function focusList(max){
@@ -173,14 +197,45 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     }
     return items;
   }
+  function shuffle(values){
+    for(let i=values.length-1; i>0; i--){
+      const j = Math.floor(Math.random() * (i + 1));
+      [values[i], values[j]] = [values[j], values[i]];
+    }
+    return values;
+  }
+  function makeFourOptions(correct, max){
+    const values = new Set([correct]);
+    const candidates = [];
+    for(let delta=1; delta<=max; delta++){
+      if(correct - delta >= 0) candidates.push(correct - delta);
+      if(correct + delta <= max) candidates.push(correct + delta);
+    }
+    shuffle(candidates);
+    for(const candidate of candidates){
+      if(values.size >= 4) break;
+      values.add(candidate);
+    }
+    while(values.size < 4){
+      values.add(Math.floor(Math.random() * (max + 1)));
+    }
+    return shuffle(Array.from(values));
+  }
   function buildKeys(){
     const keypad = el('keypad');
     keypad.innerHTML = '';
-    for(let i=0; i<=config.range; i++){
+    const current = state.items[state.index];
+    const useFour = config.range === 10 && config.answerMode === 'four' && current;
+    keypad.classList.toggle('four-options', !!useFour);
+    const values = useFour ? makeFourOptions(result(current), 10) : Array.from({length: config.range + 1}, (_, i) => i);
+    values.forEach(i => {
       const btn = document.createElement('button');
-      btn.type = 'button'; btn.className = 'answerkey'; btn.textContent = String(i); btn.dataset.value = String(i);
+      btn.type = 'button';
+      btn.className = 'answerkey';
+      btn.textContent = String(i);
+      btn.dataset.value = String(i);
       keypad.appendChild(btn);
-    }
+    });
   }
   function renderQuestion(){
     if(state.finished) return;
@@ -193,6 +248,7 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     el('bar').style.width = (state.index / config.total * 100) + '%';
     el('preview').textContent = '?'; el('feedback').textContent = 'Tik het juiste antwoord aan'; el('feedback').className = 'feedback';
     el('burst').classList.remove('show');
+    buildKeys();
     state.locked = false;
   }
   function startGame(){
@@ -295,7 +351,14 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;ma
     el('settingsBtn').addEventListener('click', openSettings); el('startSettingsBtn').addEventListener('click', openSettings); el('finishSettingsBtn').addEventListener('click', openSettings);
     el('cancelSettingsBtn').addEventListener('click', () => show('start'));
     el('saveSettingsBtn').addEventListener('click', () => { saveSettings(); show('start'); });
-    all('.segbtn').forEach(btn => btn.addEventListener('click', () => { all('.segbtn').forEach(x => x.classList.toggle('active', x === btn)); }));
+    all('[data-range]').forEach(btn => btn.addEventListener('click', () => {
+    all('[data-range]').forEach(x => x.classList.toggle('active', x === btn));
+    updateAnswerModeAvailability();
+  }));
+  all('[data-answer-mode]').forEach(btn => btn.addEventListener('click', () => {
+    if(el('answerModeSetting').classList.contains('disabled')) return;
+    all('[data-answer-mode]').forEach(x => x.classList.toggle('active', x === btn));
+  }));
     el('keypad').addEventListener('click', evt => { const btn = evt.target.closest('[data-value]'); if(btn) answer(btn.dataset.value); });
     el('continueAfterWrongBtn').addEventListener('click', continueAfterWrong);
   }
